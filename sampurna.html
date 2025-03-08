@@ -27,21 +27,23 @@
             max-width: 600px;
         }
         h1 {
-            color: rgb(147, 59, 59);
-            font-size: 2em;
+            color: rgb(147, 59, 59); /* Change to white for better contrast */
+            font-size: 2em; /* Increase font size */
             font-weight: bold;
             padding: 20px;
         }
 
         .heart {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background-color: red;
-            clip-path: polygon(50% 15%,80% 0,100% 30%,50% 100%,0 30%,20% 0);
-            animation: floatUp 4s infinite ease-in-out;
-            z-index: 1;
-        }
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    clip-path: polygon(50% 15%,80% 0,100% 30%,50% 100%,0 30%,20% 0);
+    animation: floatUp 4s infinite ease-in-out;
+    z-index: 1;
+}
+
+
 
         @media (max-width: 768px) {
             .container {
@@ -78,25 +80,10 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="title"><br><br><br><br><br>HAPPY WOMEN'S DAY<br>Beautiful ❤️!</h1>
+        <h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>HAPPY WOMEN'S DAY<br>shampooo ❤️!</h1>
     </div>
     <div class="signature">- arijit</div>
-
     <script>
-        // Function to read the name from URL
-        function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
-        }
-
-        // Set the name dynamically
-        const name = getQueryParam('name');
-        const title = document.getElementById('title');
-        if (name) {
-            title.innerHTML = `HAPPY WOMEN'S DAY<br>${name.toUpperCase()} ❤️!`;
-        }
-
-        // Heart Animation
         function createHeart() {
             const heart = document.createElement('div');
             heart.classList.add('heart');
